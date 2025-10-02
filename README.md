@@ -23,8 +23,9 @@ Build a scraper that takes in a txt file of links, or even better, a folder link
 
 ## Prerequisites
 
-### Install Required Python Packages
 ```
+git clone https://github.com/hritiknarayan/google-drive-downloader-with-auth
+cd google-drive-downloader-with-auth
 pip install google-api-python-client google-auth google-auth-oauthlib
 ```
 
