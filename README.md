@@ -27,8 +27,6 @@ Build a general scraper that grabs ID from links, and grabs original fnames stra
 
 ## Prerequisites
 
----
-
 ### Install Required Python Packages
 pip install google-api-python-client google-auth google-auth-oauthlib
 
