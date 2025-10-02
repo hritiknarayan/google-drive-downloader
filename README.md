@@ -18,14 +18,11 @@ This repo contains two scripts to bypass this usage limit (which I assume stems 
 - `download.sh`: Downloads files given a txt list of ID names.
 - `get_drive_filenames.py`: Creates id, original-fname pairs, since `download.sh` saves files as `{id}` with no names/extensions. 
 
----
 
 ## Improvements:
 
 Too lazy to do this right now but potential improvements:
 Build a general scraper that grabs ID from links, and grabs original fnames straight from the ID during the download process.
-
----
 
 ## Prerequisites
 
@@ -41,8 +38,6 @@ pip install google-api-python-client google-auth google-auth-oauthlib
 4. Click **Exchange authorization code for tokens**.
 5. Copy the **Access token**,
 
----
-
 ## Usage
 
 ### download.sh
@@ -54,8 +49,6 @@ chmod +x download.sh
 
 Downloads each file listed in `file_ids.txt` to `destination_folder` as `{fileID}`.
 
----
-
 ### get_drive_filenames.py
 
 ```
@@ -64,11 +57,6 @@ python get_drive_filenames.py YOUR_ACCESS_TOKEN file_ids.txt output_filenames.tx
 
 Reads file IDs from `file_ids.txt`, fetches their Drive filenames, and saves `fileID,filename` pairs to `output_filenames.txt`.
 
----
-
-## Notes
-
-- OAuth access tokens expire quickly; generate a new token as needed.
 
 
 
