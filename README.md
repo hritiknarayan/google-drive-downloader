@@ -8,7 +8,9 @@ I ran into this particular message too many times while trying to download (via 
 
 ```
 
-This is an extension of this helpful Stackoverflow answer: [user sjdonado's answer](https://stackoverflow.com/a/67550427).
+Common solutions include copying files to your own drive, etc. but I have found these to be impractical and inconsistent.
+
+This is an extension of this helpful conversation on StackOverflow: [user sjdonado's answer](https://stackoverflow.com/a/67550427).
 
 ## Overview
 This repo contains two scripts to bypass this usage limit (which I assume stems from using an unauthenticated user to ping google):
