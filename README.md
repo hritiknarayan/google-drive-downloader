@@ -28,14 +28,16 @@ Build a general scraper that grabs ID from links, and grabs original fnames stra
 ## Prerequisites
 
 ### Install Required Python Packages
+```
 pip install google-api-python-client google-auth google-auth-oauthlib
+```
 
 ### Generate OAuth Access Token
 1. Go to the [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/).
 2. In **Select the Scope**, paste this scope: https://www.googleapis.com/auth/drive.readonly
 3. Click **Authorize APIs** and sign in with your Google account.
 4. Click **Exchange authorization code for tokens**.
-5. Copy the **Access token** for use with the scripts.
+5. Copy the **Access token**,
 
 ---
 
