@@ -28,3 +28,20 @@ while IFS= read -r FILE_ID || [[ -n "$FILE_ID" ]]; do
 done < "$FILE_IDS_PATH"
 
 echo "Downloads complete."
+
+python get_drive_filenames.py "$ACCESS_TOKEN" "$FILE_IDS_PATH" "${DESTINATION_FOLDER}/filenames.txt"
+
+while IFS=',' read -r fid realname; do
+    src="${DESTINATION_FOLDER}/${fid}"
+    dest="${DESTINATION_FOLDER}/${realname}"
+
+    if [[ -f "$src" ]]; then
+        echo "Renaming $src to $dest"
+        mv -n "$src" "$dest"
+    else
+        echo "File not found: $src"
+    fi
+done < "${DESTINATION_FOLDER}/filenames.txt"
+
+echo "All files renamed."
+

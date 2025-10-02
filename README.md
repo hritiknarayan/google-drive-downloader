@@ -13,16 +13,13 @@ Common solutions include copying files to your own drive, etc. but I have found 
 This is an extension of this helpful conversation on StackOverflow: [user sjdonado's answer](https://stackoverflow.com/a/67550427).
 
 ## Overview
-This repo contains two scripts to bypass this usage limit (which I assume stems from using an unauthenticated user to ping google):
-
-- `download.sh`: Downloads files given a txt list of ID names.
-- `get_drive_filenames.py`: Creates id, original-fname pairs, since `download.sh` saves files as `{id}` with no names/extensions. 
+This repo contains a bash script (and python helper) to bypass this usage limit (which I assume stems from using an unauthenticated user to ping google):
 
 
 ## Improvements:
 
 Too lazy to do this right now but potential improvements:
-Build a general scraper that grabs ID from links, and grabs original fnames straight from the ID during the download process.
+Build a scraper that takes in a txt file of links, or even better, a folder link and then downloads all the contained files.
 
 ## Prerequisites
 
@@ -47,15 +44,8 @@ chmod +x download.sh
 ./download.sh YOUR_ACCESS_TOKEN file_ids.txt destination_folder
 ```
 
-Downloads each file listed in `file_ids.txt` to `destination_folder` as `{fileID}`.
+Downloads each file listed in `file_ids.txt` to `destination_folder` as `{fileID}` and then renames them to appropriate filenames as retrieved from Google Drive.
 
-### get_drive_filenames.py
-
-```
-python get_drive_filenames.py YOUR_ACCESS_TOKEN file_ids.txt output_filenames.txt
-```
-
-Reads file IDs from `file_ids.txt`, fetches their Drive filenames, and saves `fileID,filename` pairs to `output_filenames.txt`.
 
 
 
